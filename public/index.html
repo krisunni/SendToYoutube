@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" ng-app='STY'>
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+        <!-- icons for browser and iPhone -->
+        <!-- <link rel="apple-touch-icon" href="BaseStation.png" />
+        <link rel="favicon" href="favicon.ico" TYPE="image/x-icon" />-->
+        <title>SendToYoutube</title>
+        <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+        <!-- USE GOOGLE CDN -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
+        -->
+        <script src="/script.js"></script>
+        <script src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+        <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    </head>
+    
+    <body>
+        <form ng-controller="Systems">
+            <input type="radio" class="btn btn-primary" ng-model="system" value="ouya">ouya
+            <br/>
+            <input type="radio" class="btn btn-primary" ng-model="system" value="beta">beta
+            <br/>
+            <input type="radio" class="btn btn-primary" ng-model="system" value="mac">mac
+            <br/>
+            <tt>System = {{system}}</tt>
+            <br/>
+        </form>
+        <form ng-controller="STYCtrl" ng-submit="SendURL()">
+            <div>
+                <h1>Paste URL here</h1>
+                <input class="input-lg input-block" type="text" id="url" name="url" ng-model="url"
+                placeholder="URL">
+                <button class="btn btn-primary btn-lg btn-block">Send to XBMC</button>
+            </div>
+        </form>
+      <!--  <div ng-controller="SystemsCtrl">
+            <h4>Radio</h4>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" ng-model="radioModel" btn-radio="'ouya'"
+                value="ouya">ouya</button>
+                <button type="button" class="btn btn-primary" ng-model="radioModel"
+                btn-radio="'beta'" value="beta">beta</button>
+                <button type="button" class="btn btn-primary" ng-model="radioModel"
+                btn-radio="'mac'" value="mac">mac</button>
+            </div>
+            <pre>{{radioModel}}</pre>
+        </div>-->
+    </body>
+
+</html>
