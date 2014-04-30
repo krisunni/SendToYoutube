@@ -4,8 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
         <!-- icons for browser and iPhone -->
-        <!-- <link rel="apple-touch-icon" href="BaseStation.png" />
-        <link rel="favicon" href="favicon.ico" TYPE="image/x-icon" />-->
+        <link rel="apple-touch-icon" href="/images/icon-youtube.ico" />
         <title>SendToYoutube</title>
         <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
         <!-- USE GOOGLE CDN -->
@@ -16,12 +15,11 @@
         <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css"
         rel="stylesheet">
     </head>
-    
     <body>
         <form ng-controller="Systems">
-            <input type="radio" class="btn btn-primary" ng-model="system" value="ouya">ouya
+            <input type="radio" class="btn btn-primary" ng-model="system" value="ouya.ku">ouya
             <br/>
-            <input type="radio" class="btn btn-primary" ng-model="system" value="beta">beta
+            <input type="radio" class="btn btn-primary" ng-model="system" value="beta.ku">beta
             <br/>
             <input type="radio" class="btn btn-primary" ng-model="system" value="mac">mac
             <br/>
@@ -36,7 +34,7 @@
                 <button class="btn btn-primary btn-lg btn-block">Send to XBMC</button>
             </div>
         </form>
-      <!--  <div ng-controller="SystemsCtrl">
+      <div ng-controller="SystemsCtrl">
             <h4>Radio</h4>
             <div class="btn-group">
                 <button type="button" class="btn btn-primary" ng-model="radioModel" btn-radio="'ouya'"
@@ -47,7 +45,7 @@
                 btn-radio="'mac'" value="mac">mac</button>
             </div>
             <pre>{{radioModel}}</pre>
-        </div>-->
+        </div>
     </body>
 
 </html>
