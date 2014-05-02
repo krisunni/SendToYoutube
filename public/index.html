@@ -2,7 +2,11 @@
 <html lang="en" ng-app='STY'>
     
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1
+        user-scalable=no">
+-->
+        <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
+        />
         <!-- icons for browser and iPhone -->
         <link rel="apple-touch-icon" href="/images/icon-youtube.ico" />
         <title>SendToYoutube</title>
@@ -17,9 +21,9 @@
     
     <body>
         <form ng-controller="HostSystem">
-           <span ng-repeat="sys in system" style="float:left">
-            <input name="currentHost" type="radio" class="btn btn-primary" ng-m model="currentHost" value="sys">{{sys}}
-            </span>
+            <span ng-repeat="sys in system" style="float:left">
+                <input name="currentHost" type="radio" class="btn btn-primary" ng-value=sys ng-m model="system"
+                value="sys">{{currentHost}}</span>
             <tt>System = {{currentHost}}</tt>
             <br/>
         </form>
