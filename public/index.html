@@ -2,11 +2,7 @@
 <html lang="en" ng-app='STY'>
     
     <head>
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1
-        user-scalable=no">
--->
-        <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
         <!-- icons for browser and iPhone -->
         <link rel="apple-touch-icon" href="/images/icon-youtube.ico" />
         <title>SendToYoutube</title>
@@ -18,19 +14,26 @@
         rel="stylesheet">
         <script src="/script.js"></script>
     </head>
+    <style type="text/css">
+        body {
+            background-image:url('/images/bkgrndyoutube.jpg');
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-position:center bottom;
+        }
+    </style>
     
     <body>
         <form ng-controller="HostSystem">
-            <span ng-repeat="sys in system" style="float:left">
-                <input name="currentHost" type="radio" class="btn btn-primary" ng-value=sys ng-m model="system"
-                value="sys">{{currentHost}}</span>
+            <span ng-repeat="sys in system" style="float:none">
+                <input name="currentHost" type="radio" class="btn btn-primary" ng-value=sys
+                ng-m model="system" value="sys">{{currentHost}}</span>
             <tt>System = {{currentHost}}</tt>
-            <br/>
         </form>
         <form ng-controller="STYCtrl">
-            <h1>Paste URL here</h1>
-            <input class="input-lg input-block" type="text" id="url"
-            name="url" ng-model="url" placeholder="URL">
+            <h1>Paste URL and click the host.</h1>
+            <input class="input-lg input-block"
+            style="float:left" type="text" id="url" name="url" ng-model="url" placeholder="URL">
             </div>
             <div>
                 <div data-ng-controller="HostSystem" class="container">
