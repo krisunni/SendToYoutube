@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Ouya",
+    "host": "ouya.ku",
+    "port": 8080,
+    "description": "The Ouya xbmc system in the living room ",
+    "status": false
+    },
+ {
+    "name": "PC",
+    "host": "beta.ku",
+    "port": 9090,
+    "description": "The Windwos8 xbmc system in the office",
+    "status": false
+    }
+]

@@ -46,3 +46,31 @@ app.post('/SendProxy', function(req, res) {
     ProxyRequest.end();
     res.send('<p> Command:' + ':Recieved</p>');
 });
+
+
+
+app.get('/PingCheck', function(req, res) {
+    var options = {
+        host: req.headers.hostname,
+        port: 8080,
+        method: 'get'
+    };
+    /*host is send as hostname in the header*/
+    console.log('host:' + (req.headers.hostname));
+    /* Test youtube Payload*/
+
+    var ProxyRequest = http.request(options, function(res) {
+        console.log('BODY:' + JSON.stringify(req.body));
+        console.log('SERVER:' + JSON.stringify(req.headers.hostname));
+
+        res.setEncoding('utf8');
+        res.on(req.body, function(chunk) {
+            console.log('BODY: ' + chunk);
+        });
+    });
+    ProxyRequest.on('error', function(e) {
+        console.log('problem with request: ' + e.message);
+    });
+    res.send('<p> Command:' +':Recieved</p>');
+});
+

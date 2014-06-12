@@ -12,7 +12,7 @@
         <script src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
         <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css"
         rel="stylesheet">
-        <script src="/script.js"></script>
+        <script src="/app.js"></script>
     </head>
     <style type="text/css">
         body {
@@ -24,22 +24,17 @@
     </style>
     
     <body>
-        <form ng-controller="HostSystem">
-            <span ng-repeat="sys in system" style="float:none">
-                <input name="currentHost" type="radio" class="btn btn-primary" ng-value=sys
-                ng-m model="system" value="sys">{{currentHost}}</span>
-            <tt>System = {{currentHost}}</tt>
-        </form>
         <form ng-controller="STYCtrl">
-            <h1>Paste URL and click the host.</h1>
+            <h1>Paste YouTube URL and send to xbmc</h1>
             <input class="input-lg input-block"
             style="float:left" type="text" id="url" name="url" ng-model="url" placeholder="URL">
             </div>
             <div>
-                <div data-ng-controller="HostSystem" class="container">
-                    <span ng-repeat="sys in system" style="float:left">
+                <div ng-controller="HostSystem" class="container">
+                    <span ng-repeat="sys in systems" style="float:left">
                         <p>
-                            <button class="btn btn-primary btn-lg" ng-model="user.system" ng-click="SendURL(sys)">{{sys}}</button>
+                            <button ng-mouseover="sys.description" class="btn btn-primary btn-lg"
+                            ng-model="systems" ng-click="SendURL(sys.host)">{{sys.name}}</button>
                             <br>
                         </p>
                     </span>
