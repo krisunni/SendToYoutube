@@ -1,0 +1,21 @@
+{
+  "name": "SendToYoutube",
+  "version": "0.0.1",
+  "description": "NodeJs all to send YouTube url to xbmc using JSON-RPC API ",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~3.4.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krisunni/SendToYoutube"
+  },
+  "author": "Kris Unnikannan",
+  "license": "BSD",
+  "gitHead": "68e195de3f98eb5eb210ad9b194f957897f3dd7b"
+}
