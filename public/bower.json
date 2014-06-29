@@ -1,0 +1,24 @@
+{
+  "name": "n",
+  "version": "0.0.1",
+  "homepage": "https://github.com/krisunni/SendToYoutube",
+  "authors": [
+    "Kris Unnikannan <krish.unnikannan@gmail.com>"
+  ],
+  "description": "NodeJs all to send YouTube url to xbmc using JSON-RPC API",
+  "keywords": [
+    "youtube"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.10.0",
+    "bootstrap": "~3.1.0"
+  }
+}
