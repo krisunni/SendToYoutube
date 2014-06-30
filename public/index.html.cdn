@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" ng-app='STY'>
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+        <!-- icons for browser and iPhone -->
+        <link rel="apple-touch-icon" href="/images/icon-youtube.ico" />
+        <title>SendToYoutube</title>
+        <!-- Umcomment to google cdn -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        rel="stylesheet">
+        <script src="/app.js"></script>
+    </head>
+    <style type="text/css">
+        body {
+            background-image:url('/images/bkgrndyoutube.jpg');
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-position:center bottom;
+        }
+    </style>
+    
+    <body>
+        <form ng-controller="STYCtrl">
+            <h1>Paste YouTube URL and send to xbmc</h1>
+            <input class="input-lg input-block"
+            style="float:left" type="text" id="url" name="url" ng-model="url" placeholder="URL">
+            </div>
+            <div>
+                <div ng-controller="HostSystem" class="container">
+                    <span ng-repeat="sys in systems" style="float:left">
+                        <p>
+                            <button ng-mouseover="sys.description" class="btn btn-primary btn-lg"
+                            ng-model="systems" ng-click="SendURL(sys.host)">{{sys.name}}</button>
+                            <br>
+                        </p>
+                    </span>
+                </div>
+        </form>
+    </body>
+
+</html>

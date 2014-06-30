@@ -34,12 +34,13 @@ cd SendToYoutube
 npm install
 ```
 
-The following is optional if don’t want to use google CDN for Angular and Twitter's Bootstrap
+The following is optional if don’t want to use Google CDN for Angular and Twitter's Bootstrap
 
 ```sh
 cd SendToYoutube/public
 bower install
 ```
+If you are using google CDN for Angular and Twitter's Bootstrap remove /public/index.html and rename index.html.cdn to index.html
 
 ##### Configure Host XBMC in the following json file
 
