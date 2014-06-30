@@ -5,7 +5,7 @@
   "authors": [
     "Kris Unnikannan <krish.unnikannan@gmail.com>"
   ],
-  "description": "NodeJs all to send YouTube url to xbmc using JSON-RPC API",
+  "description": "NodeJs app to send YouTube url to xbmc using JSON-RPC API",
   "keywords": [
     "youtube"
   ],
